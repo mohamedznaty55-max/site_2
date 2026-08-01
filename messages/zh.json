@@ -237,10 +237,15 @@
   "contact": {
     "hero": {
       "title": "联系我们",
-      "description": "全天候与我们的团队沟通，处理您的所有咨询、投诉或报价请求。"
+      "companyName": "Nile Link Logistics",
+      "description": "您值得信赖的物流合作伙伴，为埃及和全球提供可靠的海运、空运和陆运解决方案。"
     },
     "hq": "总部",
+    "hqAddressStreet": "Awal Tareeq Al-Anania - 制冰厂对面",
+    "hqAddressCity": "达米埃塔，埃及",
     "alexandria": "亚历山大办事处",
+    "alexandriaAddressStreet": "El Raml 车站，Concorde 大楼",
+    "alexandriaAddressCity": "亚历山大，埃及",
     "phone": "电话",
     "email": "邮箱",
     "form": {
@@ -252,7 +257,12 @@
       "message": "您的留言",
       "submit": "发送留言",
       "success": "消息发送成功！我们将尽快回复您。",
-      "error": "发生错误。请重试。"
+      "error": "发生错误。请重试。",
+      "errors": {
+        "nameRequired": "请输入您的姓名",
+        "emailInvalid": "请输入有效的邮箱地址",
+        "messageMin": "您的留言至少需要 10 个字符"
+      }
     },
     "tagline": "您在埃及值得信赖的航运合作伙伴",
     "support247": "专属协助",
@@ -260,6 +270,44 @@
     "quickResponse": {
       "title": "快速响应",
       "description": "我们的团队通常在工作时间内的2小时内回复。"
+    },
+    "channels": {
+      "phone": {
+        "title": "电话",
+        "description": "直接致电我们，获得即时帮助。"
+      },
+      "email": {
+        "title": "电子邮件",
+        "description": "给我们留言，我们将及时回复。"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "通过WhatsApp与我们的团队即时聊天。"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "description": "在Facebook上关注我们，获取最新动态。"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "description": "在LinkedIn上与我们建立专业联系。"
+      },
+      "maps": {
+        "title": "谷歌地图",
+        "description": "查找我们的办公室位置并获取路线。"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "description": "在Instagram上关注我们，获取更新和幕后内容。"
+      },
+      "x": {
+        "title": "X (Twitter)",
+        "description": "在X上关注我们，获取新闻和行业见解。"
+      },
+      "discord": {
+        "title": "Discord",
+        "description": "加入我们的Discord社区，保持联系。"
+      }
     }
   },
   "quote": {

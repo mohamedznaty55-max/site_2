@@ -72,9 +72,9 @@ export function Navbar() {
       <div className="hidden border-b border-white/10 bg-secondary-900 text-sm text-white/80 md:block dark:border-secondary-800">
         <Container className="flex items-center justify-between py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:+201000842099" className="flex items-center gap-1.5 transition-colors hover:text-white">
+            <a href="tel:+20100018549" className="flex items-center gap-1.5 transition-colors hover:text-white">
               <Phone className="h-3.5 w-3.5" />
-              +2 0100 0842099
+              <span dir="ltr">+20 10 00018549</span>
             </a>
             <EmailLink className="flex items-center gap-1.5 transition-colors hover:text-white">
               <Mail className="h-3.5 w-3.5" />
@@ -86,19 +86,33 @@ export function Navbar() {
 
       <nav className="border-b border-transparent">
         <Container className="flex h-16 items-center justify-between md:h-20">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-1.5">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500 text-sm font-bold text-white">
               NL
             </div>
-            <span
-              className={cn(
-                "text-xl font-bold transition-colors",
-                scrolled
-                  ? "text-secondary-900 dark:text-white"
-                  : "text-white"
-              )}
-            >
-              NileLink
+            <span className="flex flex-col leading-none">
+              <span
+                className={cn(
+                  "text-sm font-bold tracking-wide transition-colors sm:text-base",
+                  scrolled ? "text-secondary-900 dark:text-white" : "text-white"
+                )}
+              >
+                Nile Link
+              </span>
+              <span
+                className={cn(
+                  "my-0.5 border-t transition-colors",
+                  scrolled ? "border-primary-500" : "border-white/60"
+                )}
+              />
+              <span
+                className={cn(
+                  "text-[9px] font-medium uppercase tracking-[0.2em] transition-colors sm:text-[11px]",
+                  scrolled ? "text-secondary-600 dark:text-white" : "text-white"
+                )}
+              >
+                Logistics
+              </span>
             </span>
           </Link>
 

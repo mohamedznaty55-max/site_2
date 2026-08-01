@@ -25,9 +25,9 @@ export function ContactInfo() {
             <div>
               <h3 className="font-bold text-secondary-900 dark:text-white">{t("hq")}</h3>
               <p className="mt-1 text-sm text-secondary-600 dark:text-secondary-400">
-                Al-Basarta, next to the Ebad Al-Rahman Mosque
+                {t("hqAddressStreet")}
               </p>
-              <p className="text-sm text-secondary-600 dark:text-secondary-400">Damietta, Egypt</p>
+              <p className="text-sm text-secondary-600 dark:text-secondary-400">{t("hqAddressCity")}</p>
             </div>
           </div>
 
@@ -38,9 +38,9 @@ export function ContactInfo() {
             <div>
               <h3 className="font-bold text-secondary-900 dark:text-white">{t("alexandria")}</h3>
               <p className="mt-1 text-sm text-secondary-600 dark:text-secondary-400">
-                El Raml Station, Concorde Building
+                {t("alexandriaAddressStreet")}
               </p>
-              <p className="text-sm text-secondary-600 dark:text-secondary-400">Alexandria, Egypt</p>
+              <p className="text-sm text-secondary-600 dark:text-secondary-400">{t("alexandriaAddressCity")}</p>
             </div>
           </div>
 
@@ -50,11 +50,8 @@ export function ContactInfo() {
             </div>
             <div>
               <h3 className="font-bold text-secondary-900 dark:text-white">{t("phone")}</h3>
-              <a href="tel:+201000842099" className="mt-1 block text-sm text-secondary-600 transition-colors hover:text-primary-500 dark:text-secondary-400">
-                +2 0100 0842099
-              </a>
-              <a href="tel:+201222965980" className="block text-sm text-secondary-600 transition-colors hover:text-primary-500 dark:text-secondary-400">
-                +2 01222965980
+              <a href="tel:+20100018549" className="mt-1 block text-sm text-secondary-600 transition-colors hover:text-primary-500 dark:text-secondary-400">
+                <span dir="ltr">+20 10 00018549</span>
               </a>
             </div>
           </div>

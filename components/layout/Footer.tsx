@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { Phone, Mail, MapPin, ArrowUpRight, Ship, ArrowUp } from "lucide-react"
+import { Phone, Mail, MapPin, ArrowUpRight, ArrowUp } from "lucide-react"
 import { FaFacebook, FaWhatsapp, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import { Container } from "@/components/ui/Container"
 import { Link } from "@/navigation"
@@ -126,25 +126,19 @@ export function Footer() {
                   <div>
                     <p className="text-sm font-medium">{t("contact.hq")}</p>
                     <p className="text-sm text-secondary-400">
-                      Al-Basarta, next to the Ebad Al-Rahman Mosque
+                      {t("contact.hqAddressStreet")}
                     </p>
-                    <p className="text-sm text-secondary-400">Damietta, Egypt</p>
+                    <p className="text-sm text-secondary-400">{t("contact.hqAddressCity")}</p>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary-400" />
                   <div>
                     <a
-                      href="tel:+201000842099"
+                      href="tel:+20100018549"
                       className="block text-sm text-secondary-400 transition-colors hover:text-primary-400"
                     >
-                      +2 0100 0842099
-                    </a>
-                    <a
-                      href="tel:+201222965980"
-                      className="block text-sm text-secondary-400 transition-colors hover:text-primary-400"
-                    >
-                      +2 01222965980
+                      <span dir="ltr">+20 10 00018549</span>
                     </a>
                   </div>
                 </div>

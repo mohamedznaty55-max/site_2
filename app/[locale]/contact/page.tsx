@@ -1,9 +1,10 @@
 import { getTranslations } from "next-intl/server"
 import { constructMetadata } from "@/lib/seo"
 import { ContactHero } from "@/components/sections/contact/ContactHero"
+import { ContactCards } from "@/components/sections/contact/ContactCards"
 import { ContactForm } from "@/components/sections/contact/ContactForm"
-import { ContactInfo } from "@/components/sections/contact/ContactInfo"
 import { ContactMap } from "@/components/sections/contact/ContactMap"
+import { Container } from "@/components/ui/Container"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -25,13 +26,11 @@ export default function ContactPage() {
   return (
     <>
       <ContactHero />
+      <ContactCards />
       <section className="section-padding">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <ContactForm />
-            <ContactInfo />
-          </div>
-        </div>
+        <Container className="max-w-3xl">
+          <ContactForm />
+        </Container>
       </section>
       <ContactMap />
     </>

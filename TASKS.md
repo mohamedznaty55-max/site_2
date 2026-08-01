@@ -1,34 +1,46 @@
-# Implementation Plan
+# TASKS
 
-## Task 1 — Remove "15+ Years Experience" Card from Homepage
-> Remove the floating experience stat card from the AboutPreview section.
+Implementation plan for the requested changes. Each task is small and independently testable.
 
-- [x] **1.1** Remove the floating stat card div from `components/sections/AboutPreview.tsx`
-- [x] **1.2** Remove unused `Ship` SVG component and `Container` import
-- [x] **1.3** Verify the homepage still renders correctly
+## Task 1: Brand name — keep English in Arabic version
+- [x] Update `contact.hero.companyName` in all 7 locale files (`messages/*.json`) to `Nile Link Logistics Services` (English brand name; do not translate into Arabic).
+- [x] Update `CONTACT.COMPANY_NAME` in `constants/contact.ts` to `Nile Link Logistics Services`.
+- [x] Verify `ContactHero` displays the English brand name correctly in Arabic and English.
 
-## Task 2 — Fix Analytics Dashboard Authentication & Route Protection
-> Improve security: separate JWT secret from login password, harden cookie settings.
+## Task 2: Remove QR code section completely
+- [x] Remove `ContactQr` import and `<ContactQr />` usage from `app/[locale]/contact/page.tsx`.
+- [x] Delete `components/sections/contact/ContactQr.tsx`.
+- [x] Remove `contact.qr` translation keys (`title`, `description`, `qrLabel`) from all 7 locale files.
+- [x] Verify page layout/spacing flows well after removal.
 
-- [x] **2.1** Add `ANALYTICS_SECRET` environment variable for JWT signing
-- [x] **2.2** Update `lib/auth/session.ts` to use `ANALYTICS_SECRET` instead of `ANALYTICS_PASSWORD`
-- [x] **2.3** Harden cookie: set `sameSite: "strict"` and add `path` in login/logout routes
-- [x] **2.4** Verify dashboard page redirects unauthenticated users to login
-- [x] **2.5** Verify dashboard API returns 401 for unauthenticated requests
+## Task 3: Footer phone — single number
+- [x] In `components/layout/Footer.tsx`, remove the two existing phone links (`tel:+201000842099` / `+2 0100 0842099`, `tel:+201222965980` / `+2 01222965980`).
+- [x] Add a single phone link: `+20 10 00018549` / `tel:+20100018549`.
+- [x] Verify footer contact section.
 
-## Task 3 — Optimize All Website Images Performance
-> Improve image loading: configure Next.js image optimization, add priority/lazy loading, replace CSS backgrounds where feasible.
+## Task 4: WhatsApp number formatting
+- [x] In `constants/contact.ts`, format the WhatsApp card `value` cleanly and professionally (e.g. `+20 10 0001 8549`), keeping `href: https://wa.me/201000018549`.
+- [x] Ensure WhatsApp value differs visibly from the phone card value.
 
-- [x] **3.1** Add `deviceSizes`, `imageSizes`, `minimumCacheTTL` to `next.config.ts`
-- [x] **3.2** Add `priority` to above-the-fold images (all above-fold images are CSS backgrounds — will add `priority` when converting in 3.4)
-- [x] **3.3** Add explicit `loading="lazy"` to below-the-fold images (Next.js already defaults to `lazy` for images without `priority`)
-- [x] **3.4** Replace CSS `background-image` in hero sections with Next.js `<Image>` component for optimization
-- [x] **3.5** Add missing `og-image.jpg` or update OpenGraph metadata to use existing image
-- [x] **3.6** Verify image optimization config works
+## Task 5: Contact card — landline + Arabic label
+- [x] In `messages/ar.json`, change `contact.channels.phone.title` from `الهاتف` to `تلفون`.
+- [x] Extend `ContactChannel` type with optional secondary value/href for the phone card.
+- [x] Add the landline number (`0572222008` / `tel:0572222008`) under the telephone section in `constants/contact.ts`.
+- [x] Update `ContactCards.tsx` to render the secondary line when present.
+- [x] Verify phone/WhatsApp are visually distinct and organized.
 
----
+## Task 6: Social media cards — hidden by default
+- [x] Add `hidden?: boolean` to `ContactChannel` type.
+- [x] Add Instagram, X (Twitter), Discord channel entries to `CONTACT_CHANNELS` with `href: "#"` and `hidden: true`, using `FaInstagram`, `FaTwitter`, `FaDiscord` icons.
+- [x] Update `ContactCards.tsx` to filter out hidden channels.
+- [x] Add translation keys for the 3 new channels in all 7 locale files.
+- [x] Tell the user how to unhide the cards and where to replace the `#` links with real URLs.
 
-## Order of Execution
-1. Task 1 (already partially done — verify and clean up)
-2. Task 2 (security hardening)
-3. Task 3 (performance optimization)
+## Task 7: Final verification
+- [x] Run `npm run lint`.
+- [x] Run TypeScript typecheck (`npx tsc --noEmit`).
+- [x] Spot-check Arabic and English contact page in dev server.
+  - [x] Brand name `Nile Link Logistics Services` renders in both en/ar.
+  - [x] Phone card (`tel:+20100018549`) and landline (`tel:0572222008`) render in both locales.
+  - [x] WhatsApp link renders; Instagram/X/Discord cards stay hidden (placeholders `#`).
+  - [x] Arabic `تلفون` label renders correctly.

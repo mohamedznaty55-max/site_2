@@ -10,19 +10,25 @@ import { Send } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { toast } from "sonner"
 
-const contactSchema = z.object({
-  name: z.string().min(1, "Required"),
-  email: z.string().email("Invalid email"),
-  phone: z.string().optional(),
-  subject: z.string().optional(),
-  message: z.string().min(10, "Minimum 10 characters"),
-})
-
-type ContactFormData = z.infer<typeof contactSchema>
+type ContactFormData = {
+  name: string
+  email: string
+  phone?: string
+  subject?: string
+  message: string
+}
 
 export function ContactForm() {
   const t = useTranslations("contact.form")
   const [loading, setLoading] = useState(false)
+
+  const contactSchema = z.object({
+    name: z.string().min(1, t("errors.nameRequired")),
+    email: z.string().email(t("errors.emailInvalid")),
+    phone: z.string().optional(),
+    subject: z.string().optional(),
+    message: z.string().min(10, t("errors.messageMin")),
+  })
 
   const {
     register,
@@ -36,11 +42,23 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setLoading(true)
     try {
-      await new Promise((r) => setTimeout(r, 1500))
-      toast.success(t("success"))
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      const result = await res.json()
+
+      if (!res.ok) {
+        throw new Error(result.message || t("error"))
+      }
+
+      toast.success(result.message || t("success"))
       reset()
-    } catch {
-      toast.error(t("error"))
+    } catch (err) {
+      const message = err instanceof Error ? err.message : t("error")
+      toast.error(message)
     } finally {
       setLoading(false)
     }

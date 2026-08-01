@@ -237,10 +237,15 @@
   "contact": {
     "hero": {
       "title": "Contattaci",
-      "description": "Comunica con il nostro team 24/7 per tutte le tue richieste, reclami o richieste di preventivo."
+      "companyName": "Nile Link Logistics",
+      "description": "Il tuo partner logistico di fiducia che offre soluzioni affidabili di trasporto marittimo, aereo e terrestre in Egitto e in tutto il mondo."
     },
     "hq": "Sede Centrale",
+    "hqAddressStreet": "Awal Tareeq Al-Anania - Di fronte alla fabbrica del ghiaccio",
+    "hqAddressCity": "Damietta, Egitto",
     "alexandria": "Ufficio di Alessandria",
+    "alexandriaAddressStreet": "Stazione El Raml, Edificio Concorde",
+    "alexandriaAddressCity": "Alessandria, Egitto",
     "phone": "Telefono",
     "email": "Email",
     "form": {
@@ -252,7 +257,12 @@
       "message": "Il tuo messaggio",
       "submit": "Invia messaggio",
       "success": "Messaggio inviato con successo! Ti risponderemo presto.",
-      "error": "Si è verificato un errore. Riprova."
+      "error": "Si è verificato un errore. Riprova.",
+      "errors": {
+        "nameRequired": "Inserisci il tuo nome",
+        "emailInvalid": "Inserisci un indirizzo email valido",
+        "messageMin": "Il tuo messaggio deve contenere almeno 10 caratteri"
+      }
     },
     "tagline": "Il tuo partner di fiducia nelle spedizioni in Egitto",
     "support247": "Assistenza dedicata",
@@ -260,6 +270,44 @@
     "quickResponse": {
       "title": "Risposta rapida",
       "description": "Il nostro team risponde solitamente entro 2 ore durante l'orario di ufficio."
+    },
+    "channels": {
+      "phone": {
+        "title": "Telefono",
+        "description": "Chiamaci direttamente per assistenza immediata."
+      },
+      "email": {
+        "title": "Email",
+        "description": "Inviaci un messaggio e ti risponderemo prontamente."
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Chatta con il nostro team istantaneamente su WhatsApp."
+      },
+      "facebook": {
+        "title": "Facebook",
+        "description": "Seguici su Facebook per aggiornamenti e novità."
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "description": "Connettiti professionalmente con noi su LinkedIn."
+      },
+      "maps": {
+        "title": "Google Maps",
+        "description": "Trova la nostra posizione e ottieni le indicazioni stradali."
+      },
+      "instagram": {
+        "title": "Instagram",
+        "description": "Seguici su Instagram per aggiornamenti e contenuti dietro le quinte."
+      },
+      "x": {
+        "title": "X (Twitter)",
+        "description": "Seguici su X per notizie e approfondimenti di settore."
+      },
+      "discord": {
+        "title": "Discord",
+        "description": "Unisciti alla nostra community Discord per restare in contatto."
+      }
     }
   },
   "quote": {

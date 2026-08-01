@@ -25,25 +25,15 @@ export function QuoteInfo() {
             <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary-500" />
             <div>
               <p className="text-sm font-medium text-secondary-900 dark:text-white">{t("hq")}</p>
-              <p className="text-sm text-secondary-500">Al-Basarta, next to the Ebad Al-Rahman Mosque</p>
-              <p className="text-sm text-secondary-500">Damietta, Egypt</p>
-            </div>
-          </div>
-
-          <div className="flex gap-3">
-            <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary-500" />
-            <div>
-              <p className="text-sm font-medium text-secondary-900 dark:text-white">{t("alexandria")}</p>
-              <p className="text-sm text-secondary-500">El Raml Station, Concorde Building</p>
-              <p className="text-sm text-secondary-500">Alexandria, Egypt</p>
+              <p className="text-sm text-secondary-500">{t("hqAddressStreet")}</p>
+              <p className="text-sm text-secondary-500">{t("hqAddressCity")}</p>
             </div>
           </div>
 
           <div className="flex gap-3">
             <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary-500" />
             <div>
-              <a href="tel:+201000842099" className="block text-sm text-secondary-600 transition-colors hover:text-primary-500 dark:text-secondary-400">+2 0100 0842099</a>
-              <a href="tel:+201222965980" className="block text-sm text-secondary-600 transition-colors hover:text-primary-500 dark:text-secondary-400">+2 01222965980</a>
+              <a href="tel:+20100018549" className="block text-sm text-secondary-600 transition-colors hover:text-primary-500 dark:text-secondary-400"><span dir="ltr">+20 10 00018549</span></a>
             </div>
           </div>
 

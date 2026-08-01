@@ -16,7 +16,7 @@ export function ContactMap() {
         >
           <div className="aspect-[2/1] w-full bg-secondary-200 dark:bg-secondary-700">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109196.11409178646!2d31.79162023954853!3d31.40509220942615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f9db2a5b8f3c2d%3A0x8b5f5b5f5b5f5b5f!2sDamietta%2C%20Egypt!5e0!3m2!1sen!2sus!4v1"
+              src="https://maps.google.com/maps?q=31.4038182,31.8101459&z=17&hl=en&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "400px" }}
