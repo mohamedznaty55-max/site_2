@@ -72,9 +72,9 @@ export function Navbar() {
       <div className="hidden border-b border-white/10 bg-secondary-900 text-sm text-white/80 md:block dark:border-secondary-800">
         <Container className="flex items-center justify-between py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:+20100018549" className="flex items-center gap-1.5 transition-colors hover:text-white">
+            <a href="tel:0572222008" className="flex items-center gap-1.5 transition-colors hover:text-white">
               <Phone className="h-3.5 w-3.5" />
-              <span dir="ltr">+20 10 00018549</span>
+              <span dir="ltr">0572222008</span>
             </a>
             <EmailLink className="flex items-center gap-1.5 transition-colors hover:text-white">
               <Mail className="h-3.5 w-3.5" />
