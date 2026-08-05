@@ -35,7 +35,7 @@ const organizationSchema = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Awal Tareeq Al-Anania, opposite the Ice Factory",
+    streetAddress: "Al Anania Road, Opposite the Ice Factory",
     addressLocality: "Damietta",
     addressCountry: "EG",
   },
@@ -61,7 +61,7 @@ const localBusinessSchema = {
   email: CONTACT.EMAIL,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Awal Tareeq Al-Anania, opposite the Ice Factory",
+    streetAddress: "Al Anania Road, Opposite the Ice Factory",
     addressLocality: "Damietta",
     addressCountry: "EG",
   },

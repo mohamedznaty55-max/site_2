@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/Container"
 import { Button } from "@/components/ui/Button"
 import { Link, usePathname } from "@/navigation"
 import { EmailLink } from "@/components/ui/EmailLink"
+import { CONTACT } from "@/constants/contact"
 import { cn } from "@/lib/utils"
 
 const navItems = [
@@ -72,9 +73,9 @@ export function Navbar() {
       <div className="hidden border-b border-white/10 bg-secondary-900 text-sm text-white/80 md:block dark:border-secondary-800">
         <Container className="flex items-center justify-between py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:0572222008" className="flex items-center gap-1.5 transition-colors hover:text-white">
+            <a href={`tel:${CONTACT.PHONE_LANDLINE}`} className="flex items-center gap-1.5 transition-colors hover:text-white">
               <Phone className="h-3.5 w-3.5" />
-              <span dir="ltr">0572222008</span>
+              <span dir="ltr">{CONTACT.PHONE_LANDLINE_DISPLAY}</span>
             </a>
             <EmailLink className="flex items-center gap-1.5 transition-colors hover:text-white">
               <Mail className="h-3.5 w-3.5" />

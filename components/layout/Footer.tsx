@@ -6,6 +6,7 @@ import { FaFacebook, FaWhatsapp, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import { Container } from "@/components/ui/Container"
 import { Link } from "@/navigation"
 import { EmailLink } from "@/components/ui/EmailLink"
+import { CONTACT } from "@/constants/contact"
 import { cn } from "@/lib/utils"
 import { useEffect, useState } from "react"
 
@@ -135,10 +136,10 @@ export function Footer() {
                   <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary-400" />
                   <div>
                     <a
-                      href="tel:+20100018549"
+                      href={`tel:${CONTACT.PHONE_LANDLINE}`}
                       className="block text-sm text-secondary-400 transition-colors hover:text-primary-400"
                     >
-                      <span dir="ltr">+20 10 00018549</span>
+                      <span dir="ltr">{CONTACT.PHONE_LANDLINE_DISPLAY}</span>
                     </a>
                   </div>
                 </div>
