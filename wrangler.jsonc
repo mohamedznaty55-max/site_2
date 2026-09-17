@@ -9,5 +9,11 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
+  },
+  "vars": {
+    "EMAIL_PROVIDER": "brevo",
+    "EMAIL_FROM": "noreply@nilelinklogistics.com",
+    "EMAIL_FROM_NAME": "NileLink Logistics",
+    "EMAIL_TO": "info@nilelinklogistics.com"
   }
 }
